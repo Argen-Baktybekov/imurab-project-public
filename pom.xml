@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.attractorschool</groupId>
-    <artifactId>imurab-project</artifactId>
+    <artifactId>imurab</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>imurab-project</name>
-    <description>imurab-project</description>
+    <name>imurab</name>
+    <description>imurab</description>
     <properties>
         <java.version>11</java.version>
     </properties>

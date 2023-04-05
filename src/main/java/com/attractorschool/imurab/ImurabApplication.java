@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ImurabProjectApplication {
+public class ImurabApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ImurabProjectApplication.class, args);
+        SpringApplication.run(ImurabApplication.class, args);
     }
 
 }
