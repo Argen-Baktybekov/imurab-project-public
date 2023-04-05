@@ -1,0 +1,132 @@
+"2023-04-05 16:49:20,207 INFO com.attractorschool.imurabproject.ImurabProjectApplication [restartedMain] Starting ImurabProjectApplication using Java 13.0.2 on home-ПК with PID 6868 (C:\Program Files Code\Java 12\imurab-project\target\classes started by home in C:\Program Files Code\Java 12\imurab-project)
+""2023-04-05 16:49:20,211 INFO com.attractorschool.imurabproject.ImurabProjectApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+""2023-04-05 16:49:22,741 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+""2023-04-05 16:49:22,742 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.69]
+""2023-04-05 16:49:22,873 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+""2023-04-05 16:49:23,169 INFO org.flywaydb.core.internal.license.VersionPrinter [restartedMain] Flyway Community Edition 8.5.13 by Redgate
+""2023-04-05 16:49:23,170 INFO org.flywaydb.core.internal.license.VersionPrinter [restartedMain] See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+""2023-04-05 16:49:23,170 INFO org.flywaydb.core.internal.license.VersionPrinter [restartedMain] 
+""2023-04-05 16:49:23,186 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+""2023-04-05 16:49:26,915 ERROR com.zaxxer.hikari.pool.HikariPool [restartedMain] HikariPool-1 - Exception during pool initialization.
+"org.postgresql.util.PSQLException: Ошибка при попытке подсоединения.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:331)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223)
+	at org.postgresql.Driver.makeConnection(Driver.java:402)
+	at org.postgresql.Driver.connect(Driver.java:261)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:48)
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:75)
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:147)
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:124)
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.attractorschool.imurabproject.ImurabProjectApplication.main(ImurabProjectApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.net.UnknownHostException: db
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:567)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:339)
+	at java.base/java.net.Socket.connect(Socket.java:603)
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:241)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:98)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:109)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:235)
+	... 41 common frames omitted
+"2023-04-05 16:49:26,937 INFO org.apache.catalina.core.StandardService [restartedMain] Stopping service [Tomcat]
+""2023-04-05 16:49:26,990 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+"org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.internal.exception.FlywaySqlException: Unable to obtain connection from database: Ошибка при попытке подсоединения.
+----------------------------------------------------------------------------
+SQL State  : 08001
+Error Code : 0
+Message    : Ошибка при попытке подсоединения.
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.attractorschool.imurabproject.ImurabProjectApplication.main(ImurabProjectApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.flywaydb.core.internal.exception.FlywaySqlException: Unable to obtain connection from database: Ошибка при попытке подсоединения.
+----------------------------------------------------------------------------
+SQL State  : 08001
+Error Code : 0
+Message    : Ошибка при попытке подсоединения.
+
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:60)
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:75)
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:147)
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:124)
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 23 common frames omitted
+Caused by: org.postgresql.util.PSQLException: Ошибка при попытке подсоединения.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:331)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223)
+	at org.postgresql.Driver.makeConnection(Driver.java:402)
+	at org.postgresql.Driver.connect(Driver.java:261)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:48)
+	... 29 common frames omitted
+Caused by: java.net.UnknownHostException: db
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:567)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:339)
+	at java.base/java.net.Socket.connect(Socket.java:603)
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:241)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:98)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:109)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:235)
+	... 41 common frames omitted
